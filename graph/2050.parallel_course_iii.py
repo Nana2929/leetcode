@@ -17,13 +17,17 @@ Explanation: The figure above represents the given graph and the time required t
 We start course 1 and course 2 simultaneously at month 0.
 Course 1 takes 3 months and course 2 takes 2 months to complete respectively.
 Thus, the earliest time we can start course 3 is at month 3, and the total time required is 3 + 5 = 8 months.
+
+
+Idea: Topological sort
+概念就是先找到一群 indegree = 0 的點為開頭，然後逐步刪掉這些點，並且把他們的鄰居的 indegree - 1，如果發現有新的 indegree = 0 的點，就把他們加入開頭的群組中，重複這個步驟直到所有的點都被刪掉。
 '''
 from typing import List
 from collections import defaultdict, deque
 class Solution:
     def minimumTime(self, n: int, relations: List[List[int]], time: List[int]) -> int:
 
-        # 2023/10/18 Daily Challenge 
+        # 2023/10/18 Daily Challenge
         # By reading the topological sort algorithm, I am able to get 70% of the code right
         # But I did not update the time during the topological ordering procedure
         # the # bars note the lines that I did not write in my first attempt.
