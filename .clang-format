@@ -1,0 +1,175 @@
+Language: Cpp
+BasedOnStyle: Google
+AccessModifierOffset: -3
+AlignAfterOpenBracket: true
+AlignArrayOfStructures: Right
+AlignConsecutiveAssignments: false
+AlignConsecutiveBitFields: false
+AlignConsecutiveDeclarations: false
+AlignEscapedNewlines: Right
+AlignOperands: Align
+AlignTrailingComments: true
+AllowAllArgumentsOnNextLine: false
+AllowAllConstructorInitializersOnNextLine: false
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowShortBlocksOnASingleLine: true
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortEnumsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: All
+AllowShortIfStatementsOnASingleLine: WithoutElse
+AllowShortLambdasOnASingleLine: All
+AllowShortLoopsOnASingleLine: true
+AlwaysBreakAfterDefinitionReturnType: None
+AlwaysBreakAfterReturnType: None
+AlwaysBreakBeforeMultilineStrings: false
+AlwaysBreakTemplateDeclarations: No
+BinPackArguments: false
+BinPackParameters: false
+BitFieldColonSpacing: After
+BraceWrapping:
+  AfterCaseLabel: true
+  AfterClass: true
+  AfterControlStatement: true
+  AfterEnum: true
+  AfterFunction: true
+  AfterNamespace: true
+  AfterObjCDeclaration: true
+  AfterStruct: true
+  AfterUnion: true
+  AfterExternBlock: true
+  BeforeCatch: true
+  BeforeElse: true
+  BeforeLambdaBody: true
+  BeforeWhile: false
+  IndentBraces: false
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: true
+BreakBeforeBinaryOperators: All
+BreakBeforeBraces: Custom
+BreakBeforeConceptDeclarations: true
+BreakBeforeTernaryOperators: true
+BreakConstructorInitializers: BeforeComma
+BreakInheritanceList: BeforeComma
+BreakStringLiterals: true
+ColumnLimit: 0 # no column limit
+# CommentPragmas: '^ IWYU pragma:'
+CompactNamespaces: false
+ConstructorInitializerAllOnOneLineOrOnePerLine: false   # This option is deprecated on 14.0.0
+ConstructorInitializerIndentWidth: 3
+ContinuationIndentWidth: 3
+Cpp11BracedListStyle: true
+DeriveLineEnding: false
+DerivePointerAlignment: false
+DisableFormat: false
+EmptyLineAfterAccessModifier: Always
+EmptyLineBeforeAccessModifier: Always
+ExperimentalAutoDetectBinPacking: false
+FixNamespaceComments: true
+IncludeBlocks: Preserve
+# IncludeCategories:
+#   - {Regex: '^"(llvm|llvm-c|clang|clang-c)/', Priority: 2}
+#   - {Regex: '^(<|"(gtest|gmock|isl|json)/)',  Priority: 3}
+#   - {Regex: '.*',                             Priority: 1}
+# IncludeIsMainRegex: '(Test)?$'
+# IncludeIsMainSourceRegex: ''
+IndentAccessModifiers: false
+IndentCaseBlocks: true
+IndentCaseLabels: false
+IndentExternBlock: true
+IndentGotoLabels: false
+IndentPPDirectives: None
+IndentRequires: true
+IndentWidth: 3
+IndentWrappedFunctionNames: false
+InsertTrailingCommas: Wrapped
+KeepEmptyLinesAtTheStartOfBlocks: true
+LambdaBodyIndentation: Signature
+MaxEmptyLinesToKeep: 1
+NamespaceIndentation: None
+PPIndentWidth: -1                                       # clang-format 14 (support in 13.0.1)
+# PackConstructorInitializers: Never                    # clang-format 14 (unsupport in 13.0.1)
+PenaltyBreakAssignment: 2
+PenaltyBreakBeforeFirstCallParameter: 19
+PenaltyBreakComment: 300
+PenaltyBreakFirstLessLess: 120
+# PenaltyBreakOpenParenthesis                           # clang-format 14
+PenaltyBreakString: 1000
+PenaltyBreakTemplateDeclaration: 10
+PenaltyExcessCharacter: 1000000
+PenaltyIndentedWhitespace: 0
+PenaltyReturnTypeOnItsOwnLine: 60
+PointerAlignment: Middle
+# QualifierAlignment                                    # clang-format 14
+# QualifierOrder                                        # clang-format 14
+# RawStringFormats
+ReferenceAlignment: Middle                               # clang-format 14
+ReflowComments: true
+# SeparateDefinitionBlocks: Always                      # clang-format 14 (unsupported in 13.0.1)
+# ShortNamespaceLines                                   # clang-format 14
+SortIncludes: true
+SortUsingDeclarations: true
+SpaceAfterCStyleCast: false
+SpaceAfterLogicalNot: false
+SpaceAfterTemplateKeyword: true
+SpaceAroundPointerQualifiers: Default
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCaseColon: false
+SpaceBeforeCpp11BracedList: false
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeInheritanceColon: true
+SpaceBeforeParens: ControlStatements
+# SpaceBeforeParensOptions:                              # clang-format 14 (unsupported in 13.0.1)
+#   AfterControlStatements: true
+#   AfterForeachMacros: true
+#   AfterFunctionDeclarationName: false
+#   AfterFunctionDefinitionName: false
+#   AfterIfMacros: true
+#   AfterOverloadedOperator: false
+#   BeforeNonEmptyParentheses : false
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceBeforeSquareBrackets: false
+SpaceInEmptyBlock: false
+SpaceInEmptyParentheses: false
+SpacesBeforeTrailingComments: 2
+SpacesInAngles: Never
+SpacesInCStyleCastParentheses: false
+SpacesInConditionalStatement: false
+SpacesInContainerLiterals: false
+SpacesInLineCommentPrefix:                              # clang-format 14
+  Minimum: 1                                            # clang-format 14
+  Maximum: 1                                            # clang-format 14
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+Standard: Cpp11
+TabWidth: 3
+UseCRLF: false
+UseTab: Never
+
+# Ignore Objec-C options
+# ObjCBinPackProtocolList: Auto
+# ObjCBlockIndentWidth: 3
+# ObjCBreakBeforeNestedBlockParam
+# ObjCSpaceAfterProperty: false
+# ObjCSpaceBeforeProtocolList: true
+
+# Ignore Javascript options
+# BreakAfterJavaFieldAnnotations: false
+# SortJavaStaticImport
+# JavaImportGroups
+# JavaScriptQuotes: Leave
+# JavaScriptWrapImports: true
+
+# Macro options
+# AlignConsecutiveMacros: AcrossComments
+# AttributeMacros
+# ForEachMacros: ['foreach', 'Q_FOREACH', 'BOOST_FOREACH']
+# IfMacros ['IF']                                       # clang-format 14
+# MacroBlockBegin: ''
+# MacroBlockEnd: ''
+# NamespaceMacros
+# StatementAttributeLikeMacros
+# StatementMacros: ['Q_UNUSED', 'QT_REQUIRE_VERSION']
+# TypenameMacros
+# WhitespaceSensitiveMacros
+...
