@@ -2,6 +2,7 @@
 #include <vector>
 using namespace std;
 
+#define OFFSET 5e+4
 class Solution
 {
 public:
@@ -9,7 +10,6 @@ public:
    vector<int> sortArray(vector<int> & nums)
    {
       // use counting sort
-      int OFFSET = 5e+4;
       vector<int> counter(OFFSET * 2 + 1);
       for (auto num : nums)
       {
