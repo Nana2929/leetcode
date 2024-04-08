@@ -28,10 +28,11 @@ void test2()
 void test3()
 {
    int arr[] = {10, 20, 30, 40, 50};
-   int * p = arr;
+   int *p = arr;
    int v = *++p;  // 相當於*(++p), ++的動作要在;前執行因此取值時拿到的是p+1的位置,效果上等同 v=*(p+1)=20
                   // 沒有改變arr
    printf("*++p: %d\n", v);
+   // stdout: 20 
 }
 
 int main()
