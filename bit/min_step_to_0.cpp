@@ -27,29 +27,26 @@ Bit-wise takeway:
 
  **/
 
-#include <iostream>
-#include <vector>
-#include <stack>
-#include <cmath>
 #include <bitset>
+#include <cmath>
+#include <iostream>
+#include <stack>
+#include <vector>
 using namespace std;
 
-int minStep(int n){
-    // if n has one set bit,
-    if ((n & (n-1)) == 0) return 1;
-    // else, check the number of steps for n to reach its rightside 2 power neighbor and leftside 2 power neighbor
-    // cout << "n & (-n) bit repr: " << bitset<8>(n & (-n)) << endl;
-    // rightStep: adding the lowest power of two
-    int rightStep = minStep(n + n & (-n));
-    // leftStep: subtracting the lowest power of two
-    int leftStep = minStep(n - n & (-n));
-    // once we reach a certain power of 2, by either rightStep or leftStep, we can subtract all to 0 in 1 step. 
-    return min(rightStep, leftStep) + 1;
-
+int minStep(int n)
+{
+   // THIS passes most open cases, but hidden cases all MLE
+   int power = log2(n);
+   if ((1 << power) == n) return 1;
+   int diff1 = minStep(n - (1 << power));
+   int diff2 = minStep((1 << (power + 1)) - n);
+   return 1 + min(diff1, diff2);
 }
 
-int main(){
-    int n = 27;
-    cout << minStep(n) << endl;
-    return 0;
+int main()
+{
+   int n = 27;
+   cout << minStep(n) << endl;
+   return 0;
 }
