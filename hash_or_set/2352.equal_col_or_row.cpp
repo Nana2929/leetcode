@@ -34,7 +34,8 @@ public:
         // Hashing an array (by ChatGPT)
         // Hashing a string: https://stackoverflow.com/questions/8029121/how-to-hash-stdstring
         const size_t p = 1000000007; // Large prime number
-        const size_t b = 100003; // Base value, relatively prime to p and 1 <= grid[i][j] <= 10^5 for any i, j
+        const size_t b = 100003; // Base value, relatively prime to p and greater to any element inside array
+        // the range of the elements in the array is [0, 10^5]
         size_t hash = 0;
         for (int i =0;i<grid.size();i++) {
             int num = col_or_row==1? grid[index][i]: grid[i][index]; // col_or_row=1 represents col
