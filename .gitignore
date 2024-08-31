@@ -5,10 +5,13 @@ __pycache__/
 
 # NO PYTHON SOLUTIONS IN THIS REPO
 *.py
-
+tests
 # C extensions
 *.so
 *.out
+out 
+# local settings
+.vscode
 # Distribution / packaging
 .Python
 build/
